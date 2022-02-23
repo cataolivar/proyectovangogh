@@ -8,9 +8,7 @@
     grid-template-areas: 
     "header header header"
     "nav nav nav"
-    "tabla tabla tabla"
-    "imagenes imagenes imagenes"
-    "parrafosimg parrafosimg parrafosimg"
+    "main main main"
     "footer footer footer"
 }
 
@@ -61,7 +59,7 @@
 {
     font-family: 'Volkhov', serif; 
     font-style: italic;
-    grid-area: tabla;
+    grid-area: main;
 } 
 
 .table__index
@@ -86,7 +84,6 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    grid-area: imagenes;
 }
 
 .img__1
@@ -112,7 +109,6 @@ margin-left: auto;
     justify-content: center;
     justify-content:space-between;
     flex-wrap: wrap;
-    grid-area: parrafosimg;
 }
 
 /*FOOTER*/
