@@ -58,7 +58,7 @@
     align-items: center;
 }
 
-li:hover{
+.li:hover{
 transform: scale(1.2);
 }
 
@@ -126,70 +126,61 @@ margin-top: 10px;
 
 @media screen and (max-width:412px) {
 
+  .header{
+        max-width:max-content;
+        display:grid;
+        grid-template-columns: 31vw 34vw 35vw;   
+        grid-template-rows: 70px;
+    }
+
+    .h1__vangogh
+    {
+        font-size:15px;   
+        margin-left:141px;
+    }
+
+    .logotype
+    {
+        margin-left: 80px;
+    }
+
+    .nav
+    {
+        max-width:max-content;
+        display:grid;
+        grid-template-columns: 31vw 34vw 35vw;  
+        margin-left:-0px; 
+    }
+
+    .nav__ul__li
+    {
+        margin-left: 190px;
+        padding-left: 5px;
+        display: grid;
+        grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    }
+
+    .main__index
+    {
+        width: 412px;
+        margin-top: 15px;
+    }
+
     .section__p__index
     {
-        display: grid;
-        grid-template-rows: 30px 30px 30px;
-        margin-bottom: 20px;
-        margin-left: 40px;
-        
+        display:grid;
+        grid-template-columns: 120px 120px 120px;
     }
-    
-    .img__2
+
+    .footer__index
     {
-    margin-left: -2px;
+        width: 412px;
+        margin-top: 15px;
+
     }
 
-    .img__3
-    {
-        margin-left:-2px;
-    }
-
-    .footer
-    {
-     margin-left:30px;
-    }
 }
 
-/*MEDIA QUERIE - TABLET INDEX*/
-
-@media screen and (max-width:768px)
-{
-.nav{
-width: 768px;
-margin-left: 15px;
-}
-
-.nav__ul__li
-{
-    padding-left: 5px;
-}
-
-.section__table
-{
-    padding-right: 200px;
-}
-
-.section__img__index
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.section__p__index
-{
-    display:grid;
-    grid-template-rows: 30px 30px 30px;
-    justify-content: center;
-    padding-bottom: 20px;
-}
-.footer{
-    margin-left: 15px;
-}
-
-
-}
 
 /*HISTORIA*/
 
@@ -220,6 +211,8 @@ grid-area: header;
     text-align: center;
     font-family: 'Volkhov', serif; 
     font-style: italic;
+    margin-bottom: 20px;
+    margin-top: 20px;
     grid-area: main;
 }
 
@@ -227,6 +220,7 @@ grid-area: header;
 {
 margin: 2rem 3rem;
 text-align: justify;
+line-height: 25px;
 }
 
 .h3__historia
@@ -331,7 +325,13 @@ text-align: justify;
     text-align: center;
     font-family: 'Volkhov', serif; 
     font-style: italic;
+    margin-top: 20px;
     grid-area: main;
+}
+
+.main__periodos p
+{
+    line-height: 25px;
 }
 
 .section__periodos
@@ -382,39 +382,83 @@ width: 1000px;
 
 /*MEDIA QUERIE _ MOBILE PERIODOS*/
 
-@media screen and (max-width:412px)  {
-
+@media screen and (max-width:412px) {
+    
+    .main__periodos
+    {
+       width: 400px;
+       padding-left: 10px;
+       padding-right: 10px;
+    }
+    
     .section__periodos
     {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-left: -1px;}
+    }
 
-    .div__periodos1
+    .footer__periodos
     {
-        width: 800px;
-        margin-bottom: 40px;
+        width: 412px;
+        margin-top: 1100px;
     }
 
 }
 
-/*MEDIA QUERIE - TABLET PERIODOS*/
+/*MUSEO*/
 
-@media screen and (max-width:768px)
+.grid__area__museo
 {
-    .header
-    {
-        width: 100%;
-    }
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
 
-    .nav{
-        width: 100%;
-    }
+}
 
-    .section__periodos{
-        margin-left: -1px;
-    }
+/*HEADER*/
+
+.header
+{
+    grid-area: header;
+}
+
+/*MAIN*/
+
+.main__museo
+{
+    text-align:center;
+    list-style-position:inside;
+    font-family: 'Volkhov', serif; 
+    font-style: italic;
+    grid-area: main;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main__museo section
+{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+/*MEDIA QUERIE _ MOBILE MUSEO*/
+
+@media screen and (max-width:412px)
+{
+.main__museo
+{
+    width: 412px;
+    margin-bottom: 70px;
+}
+.mapa
+{
+    width: 300px;
+    height: 300px;
+}
+
 }
 
 /*CONTACTO*/
@@ -452,9 +496,27 @@ transition: 2s;
     text-align: center;
     font-family: 'Volkhov', serif; 
     font-style: italic;
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
     grid-area: main;
 }
+
+.section__contacto
+{
+    border: 1px solid black;
+    width: 600px;
+    margin-top: 10px;
+}
+
+.h2__contacto
+{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
 .section
 {
  margin-bottom: 30px;
@@ -464,6 +526,12 @@ transition: 2s;
 {
     margin-right: 4%;
     margin-bottom: 30px;
+}
+
+.checkbox
+{
+    display: flex;
+    justify-content: center;
 }
 
 /*FOOTER*/
@@ -477,49 +545,22 @@ transition: 2s;
 
 @media screen and (max-width:412px)
 {
-    .img__contacto{
+    .img__contacto
+    {
         width: 300px;
+        margin-top: 20px;
+    }
+
+    .section__contacto
+    {
+        width: 370px;
+        margin-bottom: 70px;
     }
 
     .footer
     {
         max-width: 412px;  
-
-    
     }
-}
-
-/*MUSEO*/
-
-.grid__area__museo
-{
-    display: grid;
-    grid-template-areas: 
-    "header header header"
-    "nav nav nav"
-    "main main main"
-    "footer footer footer";
-
-}
-
-/*HEADER*/
-
-.header
-{
-    grid-area: header;
-}
-
-/*MAIN*/
-
-.main__museo
-{
-    text-align:center;
-    list-style-position:inside;
-    font-family: 'Volkhov', serif; 
-    font-style: italic;
-    grid-area: main;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
  /*FOOTER*/
@@ -536,5 +577,10 @@ transition: 2s;
     align-items:center ;
     justify-items: center;
     border-top: black solid 1px;
+    bottom: 0; 
     grid-area: footer;
 }
+
+.footer__a:hover{
+    transform: scale(1.2);
+    }
